@@ -110,6 +110,9 @@
   }
   body {
     @apply bg-background text-foreground;
+    /* Buffer base type: fluid step-0 (16->18px), leading inherited from html */
+    font-size: var(--font-size-step-0);
+    line-height: inherit;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
@@ -117,6 +120,8 @@
   }
   html {
     @apply font-sans;
+    /* Buffer sets html line-height 1.4 (overrides preflight 1.5) */
+    line-height: var(--line-height-regular);
   }
 }
 
@@ -174,6 +179,20 @@
   --text-lg--line-height: var(--line-height-regular);
   --text-xl--line-height: var(--line-height-tight);
   --text-2xl--line-height: var(--line-height-tight);
+
+  /* Buffer fluid spacing: numeric utilities resolve these theme keys
+     first (verified: p-4 emits padding:var(--spacing-4)), falling back
+     to calc(var(--spacing) * N) for undefined keys. Fixed chrome
+     (icons, tracks, dots, hairlines) is pinned to explicit px values
+     at call sites so it never goes fluid. */
+  --spacing-1: clamp(0.5rem, 0.4805rem + 0.0977vi, 0.5625rem);
+  --spacing-2: clamp(0.75rem, 0.7109rem + 0.1953vi, 0.875rem);
+  --spacing-3: clamp(1rem, 0.9609rem + 0.1953vi, 1.125rem);
+  --spacing-4: clamp(1.5rem, 1.4414rem + 0.293vi, 1.6875rem);
+  --spacing-5: clamp(2rem, 1.9219rem + 0.3906vi, 2.25rem);
+  --spacing-6: clamp(3rem, 2.8828rem + 0.5859vi, 3.375rem);
+  --spacing-7: clamp(4rem, 3.8438rem + 0.7813vi, 4.5rem);
+  --spacing-8: clamp(6rem, 5.7656rem + 1.1719vi, 6.75rem);
 }
 
 :root {

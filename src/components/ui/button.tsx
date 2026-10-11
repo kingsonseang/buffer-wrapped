@@ -39,14 +39,14 @@ const buttonFaceVariants = cva(
       },
       size: {
         default:
-          "px-[1.25em] py-[0.5em] text-[length:var(--font-size-step-0)] has-data-[icon=inline-end]:pe-[1em] has-data-[icon=inline-start]:ps-[1em] [&_svg:not([class*='size-'])]:size-5",
-        xs: "gap-1 px-[1em] py-[0.25em] text-[length:var(--font-size-step--2)] has-data-[icon=inline-end]:pe-[0.75em] has-data-[icon=inline-start]:ps-[0.75em] [&_svg:not([class*='size-'])]:size-3",
-        sm: "px-[1.25em] py-[0.5em] text-[length:var(--font-size-step--1)] has-data-[icon=inline-end]:pe-[1em] has-data-[icon=inline-start]:ps-[1em] [&_svg:not([class*='size-'])]:size-5",
-        lg: "px-[1.25em] py-[1em] text-[length:var(--font-size-step-0)] has-data-[icon=inline-end]:pe-[1em] has-data-[icon=inline-start]:ps-[1em] [&_svg:not([class*='size-'])]:size-5",
-        icon: "size-9 px-0 py-0 [&_svg:not([class*='size-'])]:size-5",
-        "icon-xs": "size-6 px-0 py-0 [&_svg:not([class*='size-'])]:size-3",
-        "icon-sm": "size-8 px-0 py-0 [&_svg:not([class*='size-'])]:size-4",
-        "icon-lg": "size-10 px-0 py-0 [&_svg:not([class*='size-'])]:size-5",
+          "px-[1.25em] py-[0.5em] text-[length:var(--font-size-step-0)] has-data-[icon=inline-end]:pe-[1em] has-data-[icon=inline-start]:ps-[1em] [&_svg:not([class*='size-'])]:size-[20px]",
+        xs: "gap-1 px-[1em] py-[0.25em] text-[length:var(--font-size-step--2)] has-data-[icon=inline-end]:pe-[0.75em] has-data-[icon=inline-start]:ps-[0.75em] [&_svg:not([class*='size-'])]:size-[12px]",
+        sm: "px-[1.25em] py-[0.5em] text-[length:var(--font-size-step--1)] has-data-[icon=inline-end]:pe-[1em] has-data-[icon=inline-start]:ps-[1em] [&_svg:not([class*='size-'])]:size-[20px]",
+        lg: "px-[1.25em] py-[1em] text-[length:var(--font-size-step-0)] has-data-[icon=inline-end]:pe-[1em] has-data-[icon=inline-start]:ps-[1em] [&_svg:not([class*='size-'])]:size-[20px]",
+        icon: "size-[36px] px-0 py-0 [&_svg:not([class*='size-'])]:size-[20px]",
+        "icon-xs": "size-[24px] px-0 py-0 [&_svg:not([class*='size-'])]:size-[12px]",
+        "icon-sm": "size-[32px] px-0 py-0 [&_svg:not([class*='size-'])]:size-[16px]",
+        "icon-lg": "size-[40px] px-0 py-0 [&_svg:not([class*='size-'])]:size-[20px]",
       },
     },
     defaultVariants: {
