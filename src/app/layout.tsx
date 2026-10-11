@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
-import { cn } from "#/lib/utils";
 import { Inter, Caveat, Figtree, Google_Sans_Flex } from "next/font/google";
+
+import { cn } from "#/lib/utils";
 
 import "#/styles/globals.css";
 
@@ -55,7 +56,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         "font-sans",
       )}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="flex min-h-full flex-col">{children}</body>
     </html>
   );
 }
