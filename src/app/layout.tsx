@@ -39,7 +39,18 @@ export const metadata: Metadata = {
     title: "Your Year on Buffer ✨",
     description: "Track your top posts, scheduling streaks, and growth milestones.",
   },
-  metadataBase: new URL("https://buffer-wrapped.vercel.app"),
+  // Canonical URL: explicit override first, then Vercel's system variables
+  // (production URL, else the deployment URL — both ship without protocol),
+  // then localhost for dev. System vars need "Enable access to System
+  // Environment Variables" ticked in the Vercel dashboard to be present.
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.VERCEL_PROJECT_PRODUCTION_URL
+        ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+        : process.env.VERCEL_URL
+          ? `https://${process.env.VERCEL_URL}`
+          : "http://localhost:3000"),
+  ),
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
