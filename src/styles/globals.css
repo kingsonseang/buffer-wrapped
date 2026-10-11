@@ -2,7 +2,9 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
-@custom-variant dark (&:is(.dark *));
+/* buffer.com ships no dark mode (verified: zero prefers-color-scheme
+   queries sitewide; "dark" is a per-section surface value there).
+   Single light theme by design. */
 
 @theme inline {
   --color-background: var(--background);
@@ -60,7 +62,7 @@
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-3xl: calc(var(--radius) * 2); /* Buffer medium 1.25rem */
   --radius-4xl: calc(var(--radius) * 2.6);
 }
 
@@ -100,43 +102,6 @@
   --sidebar-accent-foreground: oklch(0.29822 0.0217 190.88);
   --sidebar-border: oklch(0.83866 0.0109 100.53);
   --sidebar-ring: oklch(0.29822 0.0217 190.88);
-}
-
-.dark {
-  /* Net-new dark theme: buffer.com ships no dark mode (verified: zero
-     prefers-color-scheme queries, dark is a per-section surface value).
-     Derived from the brand-mid/surface-dark pair. */
-  --background: oklch(0.29822 0.0217 190.88);
-  --foreground: oklch(0.99365 0.0021 84.56);
-  --card: oklch(0.34568 0.0282 191.98);
-  --card-foreground: oklch(0.99365 0.0021 84.56);
-  --popover: oklch(0.34568 0.0282 191.98);
-  --popover-foreground: oklch(0.99365 0.0021 84.56);
-  --primary: oklch(0.88379 0.1224 138.08);
-  --primary-foreground: oklch(0.29822 0.0217 190.88);
-  --secondary: oklch(0.34568 0.0282 191.98);
-  --secondary-foreground: oklch(0.99365 0.0021 84.56);
-  --muted: oklch(0.34568 0.0282 191.98);
-  --muted-foreground: oklch(0.83866 0.0109 100.53);
-  --accent: oklch(0.34568 0.0282 191.98);
-  --accent-foreground: oklch(0.99365 0.0021 84.56);
-  --destructive: oklch(0.69239 0.1816 29.9);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 18%);
-  --ring: oklch(0.99365 0.0021 84.56);
-  --chart-1: oklch(0.90707 0.0823 138.44);
-  --chart-2: oklch(0.88379 0.1224 138.08);
-  --chart-3: oklch(0.81408 0.1297 141.98);
-  --chart-4: oklch(0.7385 0.1285 145.61);
-  --chart-5: oklch(0.49242 0.0915 151.98);
-  --sidebar: oklch(0.34568 0.0282 191.98);
-  --sidebar-foreground: oklch(0.99365 0.0021 84.56);
-  --sidebar-primary: oklch(0.88379 0.1224 138.08);
-  --sidebar-primary-foreground: oklch(0.29822 0.0217 190.88);
-  --sidebar-accent: oklch(0.29822 0.0217 190.88);
-  --sidebar-accent-foreground: oklch(0.99365 0.0021 84.56);
-  --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.99365 0.0021 84.56);
 }
 
 @layer base {
@@ -193,6 +158,22 @@
   --color-accent-pink: oklch(0.84597 0.0964 353.66); /* #ffb3d1 */
   --color-accent-fuscia: oklch(0.86702 0.1065 320.09); /* #f3bdff */
   --color-accent-orange: oklch(0.84321 0.1018 56.39); /* #ffbb8a */
+
+  /* Buffer fluid type: overrides Tailwind's static rem sizes so every
+     text-* utility follows the clamp scale. Line-height companions must
+     be overridden too, else Tailwind keeps calc()s against old sizes. */
+  --text-xs: clamp(12.8 / 16 * 1rem, 0.7863rem + 0.0687vi, 13.5 / 16 * 1rem);
+  --text-sm: clamp(14.3 / 16 * 1rem, 0.8703rem + 0.1172vi, 15.5 / 16 * 1rem);
+  --text-base: clamp(16 / 16 * 1rem, 0.9565rem + 0.2174vi, 18 / 16 * 1rem);
+  --text-lg: clamp(20 / 16 * 1rem, 1.1632rem + 0.4341vi, 24 / 16 * 1rem);
+  --text-xl: clamp(25 / 16 * 1rem, 1.4107rem + 0.7591vi, 32 / 16 * 1rem);
+  --text-2xl: clamp(31.3 / 16 * 1rem, 1.7056rem + 1.2375vi, 42.6 / 16 * 1rem);
+  --text-xs--line-height: var(--line-height-regular);
+  --text-sm--line-height: var(--line-height-regular);
+  --text-base--line-height: var(--line-height-regular);
+  --text-lg--line-height: var(--line-height-regular);
+  --text-xl--line-height: var(--line-height-tight);
+  --text-2xl--line-height: var(--line-height-tight);
 }
 
 :root {

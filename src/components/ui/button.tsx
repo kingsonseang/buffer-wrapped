@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "cn";
 
 const buttonVariants = cva(
-  "group/button focus-visible:outline-ring aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 relative inline-flex shrink-0 rounded-full outline-2 outline-offset-2 outline-transparent outline-solid select-none before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:transition-[translate] before:duration-150 before:ease-out disabled:pointer-events-none disabled:opacity-50 aria-invalid:ring-3",
+  "group/button focus-visible:outline-ring aria-invalid:ring-destructive/20 relative inline-flex shrink-0 rounded-full outline-2 outline-offset-2 outline-transparent outline-solid select-none before:pointer-events-none before:absolute before:inset-0 before:rounded-full before:transition-[translate] before:duration-150 before:ease-out disabled:pointer-events-none disabled:opacity-50 aria-invalid:ring-3",
   {
     variants: {
       variant: {
@@ -28,13 +28,13 @@ const buttonFaceVariants = cva(
       variant: {
         default: "border-primary bg-primary text-primary-foreground hover:bg-brand-400",
         outline:
-          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-input/30 dark:bg-transparent",
+          "border-border bg-background hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground",
         secondary:
           "bg-secondary text-secondary-foreground aria-expanded:bg-secondary aria-expanded:text-secondary-foreground hover:bg-[color-mix(in_oklch,var(--secondary),var(--foreground)_5%)]",
         ghost:
-          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground dark:hover:bg-muted/50",
+          "hover:bg-muted hover:text-foreground aria-expanded:bg-muted aria-expanded:text-foreground",
         destructive:
-          "border-destructive/20 bg-destructive/10 text-destructive hover:bg-destructive/20 dark:bg-destructive/20 dark:hover:bg-destructive/30",
+          "border-destructive/20 bg-destructive/10 text-destructive hover:bg-destructive/20",
         link: "",
       },
       size: {
