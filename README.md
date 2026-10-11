@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Buffer Wrapped
 
-## Getting Started
+Your year on Buffer, told as a story. An interactive, story-driven year-in-review
+of your social publishing — Spotify Wrapped energy, built entirely in Buffer's
+own design language.
 
-First, run the development server:
+## What it is
+
+Not a dashboard. A sequence of full-screen scenes, one idea at a time: how much
+you published, where you showed up, your rhythm and streaks, your creator
+personality, standout posts, and a set of share cards at the end. Personal,
+playful but not childish, and easy to share.
+
+The experience is still early exploration. See [`docs/buffer-wrapped.md`](docs/buffer-wrapped.md)
+for the full brief: the 17-scene / 5-act structure, the four visual directions
+(After Dark, Full Color, Editorial Yearbook, Playful Internet Culture), motion
+principles, and the data assumptions.
+
+## Design rules
+
+- **Buffer-native, not a Spotify clone.** Borrow the storytelling mechanics;
+  keep Buffer's colors, type, spacing, and components as the foundation.
+- **Mock data first.** Design the strongest version of each scene with sample
+  data. Only show metrics we can retrieve or calculate reliably once the API
+  integration lands.
+- **Kind by default.** Low-activity users get a satisfying experience too —
+  never a failure screen.
+
+## Stack
+
+Next.js 16 (App Router) + Tailwind CSS v4 + shadcn/ui (base-luma) + Base UI
+primitives. Fonts: Figtree (body), Google Sans Flex (display), Caveat
+(Wrapped accents), Inter (insights numerals). Formatting via oxfmt
+(`sortImports` + Tailwind class sorting in `.oxfmtrc.json`); lint via oxlint.
+
+## Getting started
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
+bun install
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Script                 | Purpose                          |
+| ---------------------- | -------------------------------- |
+| `bun dev`              | Development server               |
+| `bun build`            | Production build                 |
+| `bun start`            | Serve the production build       |
+| `bun run lint`         | Lint with oxlint                 |
+| `bun run format`       | Format with oxfmt                |
+| `bun run format:check` | Check formatting without writing |
 
-## Learn More
+## Environment
 
-To learn more about Next.js, take a look at the following resources:
+| Variable               | Purpose                                             |
+| ---------------------- | --------------------------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | Canonical site URL (metadata, OG images). Optional. |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Without it, the URL resolves from Vercel's system variables
+(`VERCEL_PROJECT_PRODUCTION_URL`, then `VERCEL_URL`) and falls back to
+`http://localhost:3000` in local dev.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Status
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Living document — update as the experience takes shape.
