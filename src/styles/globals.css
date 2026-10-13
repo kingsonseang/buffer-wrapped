@@ -7,253 +7,293 @@
    Single light theme by design. */
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
 
-  /* font - begins */
-  --font-sans:
-    var(--font-figtree), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-heading:
-    var(--font-google-sans-flex), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* cant use stolzl cause i don't have a license for it so... */
-  --font-mono:
-    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
-    monospace;
-  --font-handwriting:
-    var(--font-caveat), var(--font-figtree), ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --font-insights:
-    var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-    "Segoe UI Symbol", "Noto Color Emoji";
-  /* font - ends */
+    /* font - begins */
+    --font-sans:
+        var(--font-figtree), ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-heading:
+        var(--font-google-sans-flex), ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji"; /* cant use stolzl cause i don't have a license for it so... */
+    --font-mono:
+        ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+    --font-handwriting:
+        var(--font-caveat), var(--font-figtree), ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    --font-insights:
+        var(--font-inter), ui-sans-serif, system-ui, sans-serif,
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    /* font - ends */
 
-  --color-sidebar-ring: var(--sidebar-ring);
-  --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
-  --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
-  --color-sidebar-primary: var(--sidebar-primary);
-  --color-sidebar-foreground: var(--sidebar-foreground);
-  --color-sidebar: var(--sidebar);
-  --color-chart-5: var(--chart-5);
-  --color-chart-4: var(--chart-4);
-  --color-chart-3: var(--chart-3);
-  --color-chart-2: var(--chart-2);
-  --color-chart-1: var(--chart-1);
-  --color-ring: var(--ring);
-  --color-input: var(--input);
-  --color-border: var(--border);
-  --color-destructive: var(--destructive);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-accent: var(--accent);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-muted: var(--muted);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-secondary: var(--secondary);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
-  --color-card-foreground: var(--card-foreground);
-  --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
-  --radius-3xl: calc(var(--radius) * 2); /* Buffer medium 1.25rem */
-  --radius-4xl: calc(var(--radius) * 2.6);
+    --color-sidebar-ring: var(--sidebar-ring);
+    --color-sidebar-border: var(--sidebar-border);
+    --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+    --color-sidebar-accent: var(--sidebar-accent);
+    --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+    --color-sidebar-primary: var(--sidebar-primary);
+    --color-sidebar-foreground: var(--sidebar-foreground);
+    --color-sidebar: var(--sidebar);
+    --color-chart-5: var(--chart-5);
+    --color-chart-4: var(--chart-4);
+    --color-chart-3: var(--chart-3);
+    --color-chart-2: var(--chart-2);
+    --color-chart-1: var(--chart-1);
+    --color-ring: var(--ring);
+    --color-input: var(--input);
+    --color-border: var(--border);
+    --color-destructive: var(--destructive);
+    --color-accent-foreground: var(--accent-foreground);
+    --color-accent: var(--accent);
+    --color-muted-foreground: var(--muted-foreground);
+    --color-muted: var(--muted);
+    --color-secondary-foreground: var(--secondary-foreground);
+    --color-secondary: var(--secondary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-primary: var(--primary);
+    --color-popover-foreground: var(--popover-foreground);
+    --color-popover: var(--popover);
+    --color-card-foreground: var(--card-foreground);
+    --color-card: var(--card);
+    --radius-sm: calc(var(--radius) * 0.6);
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+    --radius-2xl: calc(var(--radius) * 1.8);
+    --radius-3xl: calc(var(--radius) * 2); /* Buffer medium 1.25rem */
+    --radius-4xl: calc(var(--radius) * 2.6);
 }
 
 :root {
-  /* Buffer light theme (buffer.com). Primary is a light-green pill with
+    /* Buffer light theme (buffer.com). Primary is a light-green pill with
      dark text (inverted vs the shadcn default); verified 9.91:1 AAA.
      --border is Buffer's literal #cbcac2 (1.62:1, decorative-grade). */
-  --background: oklch(0.99365 0.0021 84.56);
-  --foreground: oklch(0.29822 0.0217 190.88);
-  --card: oklch(0.99365 0.0021 84.56);
-  --card-foreground: oklch(0.29822 0.0217 190.88);
-  --popover: oklch(0.99365 0.0021 84.56);
-  --popover-foreground: oklch(0.29822 0.0217 190.88);
-  --primary: oklch(0.88379 0.1224 138.08);
-  --primary-foreground: oklch(0.29822 0.0217 190.88);
-  --secondary: oklch(0.97453 0.0054 106.5);
-  --secondary-foreground: oklch(0.29822 0.0217 190.88);
-  --muted: oklch(0.95489 0.009 106.57);
-  --muted-foreground: oklch(0.53731 0.0098 106.73);
-  --accent: oklch(0.96346 0.0224 138.9);
-  --accent-foreground: oklch(0.29822 0.0217 190.88);
-  --destructive: oklch(0.59074 0.1725 30.19);
-  --border: oklch(0.83866 0.0109 100.53);
-  --input: oklch(1 0 0);
-  --ring: oklch(0.29822 0.0217 190.88);
-  --chart-1: oklch(0.88379 0.1224 138.08);
-  --chart-2: oklch(0.7385 0.1285 145.61);
-  --chart-3: oklch(0.6146 0.1163 148.17);
-  --chart-4: oklch(0.49242 0.0915 151.98);
-  --chart-5: oklch(0.29822 0.0217 190.88);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.97453 0.0054 106.5);
-  --sidebar-foreground: oklch(0.29822 0.0217 190.88);
-  --sidebar-primary: oklch(0.88379 0.1224 138.08);
-  --sidebar-primary-foreground: oklch(0.29822 0.0217 190.88);
-  --sidebar-accent: oklch(0.95489 0.009 106.57);
-  --sidebar-accent-foreground: oklch(0.29822 0.0217 190.88);
-  --sidebar-border: oklch(0.83866 0.0109 100.53);
-  --sidebar-ring: oklch(0.29822 0.0217 190.88);
+    --background: oklch(0.99365 0.0021 84.56);
+    --foreground: oklch(0.29822 0.0217 190.88);
+    --card: oklch(0.99365 0.0021 84.56);
+    --card-foreground: oklch(0.29822 0.0217 190.88);
+    --popover: oklch(0.99365 0.0021 84.56);
+    --popover-foreground: oklch(0.29822 0.0217 190.88);
+    --primary: oklch(0.88379 0.1224 138.08);
+    --primary-foreground: oklch(0.29822 0.0217 190.88);
+    --secondary: oklch(0.97453 0.0054 106.5);
+    --secondary-foreground: oklch(0.29822 0.0217 190.88);
+    --muted: oklch(0.95489 0.009 106.57);
+    --muted-foreground: oklch(0.53731 0.0098 106.73);
+    --accent: oklch(0.96346 0.0224 138.9);
+    --accent-foreground: oklch(0.29822 0.0217 190.88);
+    --destructive: oklch(0.59074 0.1725 30.19);
+    --border: oklch(0.83866 0.0109 100.53);
+    --input: oklch(1 0 0);
+    --ring: oklch(0.29822 0.0217 190.88);
+    --chart-1: oklch(0.88379 0.1224 138.08);
+    --chart-2: oklch(0.7385 0.1285 145.61);
+    --chart-3: oklch(0.6146 0.1163 148.17);
+    --chart-4: oklch(0.49242 0.0915 151.98);
+    --chart-5: oklch(0.29822 0.0217 190.88);
+    --radius: 0.625rem;
+    --sidebar: oklch(0.97453 0.0054 106.5);
+    --sidebar-foreground: oklch(0.29822 0.0217 190.88);
+    --sidebar-primary: oklch(0.88379 0.1224 138.08);
+    --sidebar-primary-foreground: oklch(0.29822 0.0217 190.88);
+    --sidebar-accent: oklch(0.95489 0.009 106.57);
+    --sidebar-accent-foreground: oklch(0.29822 0.0217 190.88);
+    --sidebar-border: oklch(0.83866 0.0109 100.53);
+    --sidebar-ring: oklch(0.29822 0.0217 190.88);
 }
 
 @layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-    /* Buffer base type: fluid step-0 (16->18px), leading inherited from html */
-    font-size: var(--font-size-step-0);
-    line-height: inherit;
-  }
-  button:not(:disabled),
-  [role="button"]:not(:disabled) {
-    cursor: pointer;
-  }
-  html {
-    @apply font-sans;
-    /* Buffer sets html line-height 1.4 (overrides preflight 1.5) */
-    line-height: var(--line-height-regular);
-  }
+    * {
+        @apply border-border outline-ring/50;
+    }
+    body {
+        @apply bg-background text-foreground;
+        /* Buffer base type: fluid step-0 (16->18px), leading inherited from html */
+        font-size: var(--font-size-step-0);
+        line-height: inherit;
+    }
+    ::selection {
+        background-color: var(--primary);
+        color: var(--primary-foreground);
+    }
+    button:not(:disabled),
+    [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+    html {
+        @apply font-sans;
+        /* Buffer sets html line-height 1.4 (overrides preflight 1.5) */
+        line-height: var(--line-height-regular);
+    }
 }
 
 /* Buffer design tokens (buffer.com, extracted 2026-10-11).
    Additive only: nothing above references these yet, so zero visual change.
    Palette converted HSL -> OKLCH; hex in comments for reference. */
 @theme {
-  /* Brand ramp (Buffer green; hue pivots 138deg -> 191deg at 800+).
+    /* Brand ramp (Buffer green; hue pivots 138deg -> 191deg at 800+).
      L is 0-1 scale per CSS Color 4, matching the shadcn tokens above. */
-  --color-brand-50: oklch(0.96346 0.0224 138.9); /* #ecf7e9 */
-  --color-brand-100: oklch(0.93056 0.0502 137.86); /* #d8f1d0 */
-  --color-brand-200: oklch(0.90707 0.0823 138.44); /* #c6eeb9 */
-  --color-brand-300: oklch(0.88379 0.1224 138.08); /* #b0ec9c primary CTA */
-  --color-brand-400: oklch(0.81408 0.1297 141.98); /* #90d788 CTA hover */
-  --color-brand-500: oklch(0.7385 0.1285 145.61); /* #72c077 */
-  --color-brand-600: oklch(0.6146 0.1163 148.17); /* #4e975b */
-  --color-brand-700: oklch(0.49242 0.0915 151.98); /* #337047 link text */
-  --color-brand-800: oklch(0.34568 0.0282 191.98); /* #283e3d dark CTA */
-  --color-brand-900: oklch(0.29822 0.0217 190.88); /* #213130 brand dark */
+    --color-brand-50: oklch(0.96346 0.0224 138.9); /* #ecf7e9 */
+    --color-brand-100: oklch(0.93056 0.0502 137.86); /* #d8f1d0 */
+    --color-brand-200: oklch(0.90707 0.0823 138.44); /* #c6eeb9 */
+    --color-brand-300: oklch(0.88379 0.1224 138.08); /* #b0ec9c primary CTA */
+    --color-brand-400: oklch(0.81408 0.1297 141.98); /* #90d788 CTA hover */
+    --color-brand-500: oklch(0.7385 0.1285 145.61); /* #72c077 */
+    --color-brand-600: oklch(0.6146 0.1163 148.17); /* #4e975b */
+    --color-brand-700: oklch(0.49242 0.0915 151.98); /* #337047 link text */
+    --color-brand-800: oklch(0.34568 0.0282 191.98); /* #283e3d dark CTA */
+    --color-brand-900: oklch(0.29822 0.0217 190.88); /* #213130 brand dark */
 
-  /* Warm neutral ramp (Buffer neutrals are olive-tinted, hue 48-106) */
-  --color-sand-50: oklch(0.99365 0.0021 84.56); /* #fefdfb */
-  --color-sand-100: oklch(0.97453 0.0054 106.5); /* #f7f7f3 */
-  --color-sand-200: oklch(0.95489 0.009 106.57); /* #f1f1ea */
-  --color-sand-300: oklch(0.91427 0.0078 98.44); /* #e4e3dd */
-  --color-sand-400: oklch(0.83866 0.0109 100.53); /* #cbcac2 decorative only */
-  --color-sand-500: oklch(0.70988 0.011 106.68); /* #a2a29a */
-  --color-sand-600: oklch(0.64201 0.0103 106.69); /* #8d8d86 3.34:1 UI-pass */
-  --color-sand-700: oklch(0.53731 0.0098 106.73); /* #6e6e68 5.05:1 text-pass */
-  --color-sand-800: oklch(0.40597 0.007 106.71); /* #4a4a45 */
-  --color-sand-900: oklch(0.32672 0.0072 95.28); /* #363530 */
+    /* Warm neutral ramp (Buffer neutrals are olive-tinted, hue 48-106) */
+    --color-sand-50: oklch(0.99365 0.0021 84.56); /* #fefdfb */
+    --color-sand-100: oklch(0.97453 0.0054 106.5); /* #f7f7f3 */
+    --color-sand-200: oklch(0.95489 0.009 106.57); /* #f1f1ea */
+    --color-sand-300: oklch(0.91427 0.0078 98.44); /* #e4e3dd */
+    --color-sand-400: oklch(
+        0.83866 0.0109 100.53
+    ); /* #cbcac2 decorative only */
+    --color-sand-500: oklch(0.70988 0.011 106.68); /* #a2a29a */
+    --color-sand-600: oklch(0.64201 0.0103 106.69); /* #8d8d86 3.34:1 UI-pass */
+    --color-sand-700: oklch(
+        0.53731 0.0098 106.73
+    ); /* #6e6e68 5.05:1 text-pass */
+    --color-sand-800: oklch(0.40597 0.007 106.71); /* #4a4a45 */
+    --color-sand-900: oklch(0.32672 0.0072 95.28); /* #363530 */
 
-  /* Accent ramps, step 300 only (Buffer ships 10 steps; we need one) */
-  --color-accent-aqua: oklch(0.88558 0.075 188.02); /* #9feae2 */
-  --color-accent-purple: oklch(0.84919 0.0861 298.3); /* #d4c2ff */
-  --color-accent-coral: oklch(0.83489 0.0913 27.55); /* #ffb2a8 */
-  --color-accent-blue: oklch(0.86997 0.0694 243.33); /* #addaff */
-  --color-accent-yellow: oklch(0.89838 0.1061 83.84); /* #ffd88a */
-  --color-accent-pink: oklch(0.84597 0.0964 353.66); /* #ffb3d1 */
-  --color-accent-fuscia: oklch(0.86702 0.1065 320.09); /* #f3bdff */
-  --color-accent-orange: oklch(0.84321 0.1018 56.39); /* #ffbb8a */
+    /* Accent ramps, step 300 only (Buffer ships 10 steps; we need one) */
+    --color-accent-aqua: oklch(0.88558 0.075 188.02); /* #9feae2 */
+    --color-accent-purple: oklch(0.84919 0.0861 298.3); /* #d4c2ff */
+    --color-accent-coral: oklch(0.83489 0.0913 27.55); /* #ffb2a8 */
+    --color-accent-blue: oklch(0.86997 0.0694 243.33); /* #addaff */
+    --color-accent-yellow: oklch(0.89838 0.1061 83.84); /* #ffd88a */
+    --color-accent-pink: oklch(0.84597 0.0964 353.66); /* #ffb3d1 */
+    --color-accent-fuscia: oklch(0.86702 0.1065 320.09); /* #f3bdff */
+    --color-accent-orange: oklch(0.84321 0.1018 56.39); /* #ffbb8a */
 
-  /* Buffer fluid type: overrides Tailwind's static rem sizes so every
+    /* Buffer fluid type: overrides Tailwind's static rem sizes so every
      text-* utility follows the clamp scale. Line-height companions must
      be overridden too, else Tailwind keeps calc()s against old sizes. */
-  --text-xs: clamp(12.8 / 16 * 1rem, 0.7863rem + 0.0687vi, 13.5 / 16 * 1rem);
-  --text-sm: clamp(14.3 / 16 * 1rem, 0.8703rem + 0.1172vi, 15.5 / 16 * 1rem);
-  --text-base: clamp(16 / 16 * 1rem, 0.9565rem + 0.2174vi, 18 / 16 * 1rem);
-  --text-lg: clamp(20 / 16 * 1rem, 1.1632rem + 0.4341vi, 24 / 16 * 1rem);
-  --text-xl: clamp(25 / 16 * 1rem, 1.4107rem + 0.7591vi, 32 / 16 * 1rem);
-  --text-2xl: clamp(31.3 / 16 * 1rem, 1.7056rem + 1.2375vi, 42.6 / 16 * 1rem);
-  --text-xs--line-height: var(--line-height-regular);
-  --text-sm--line-height: var(--line-height-regular);
-  --text-base--line-height: var(--line-height-regular);
-  --text-lg--line-height: var(--line-height-regular);
-  --text-xl--line-height: var(--line-height-tight);
-  --text-2xl--line-height: var(--line-height-tight);
+    --text-xs: clamp(12.8 / 16 * 1rem, 0.7863rem + 0.0687vi, 13.5 / 16 * 1rem);
+    --text-sm: clamp(14.3 / 16 * 1rem, 0.8703rem + 0.1172vi, 15.5 / 16 * 1rem);
+    --text-base: clamp(16 / 16 * 1rem, 0.9565rem + 0.2174vi, 18 / 16 * 1rem);
+    --text-lg: clamp(20 / 16 * 1rem, 1.1632rem + 0.4341vi, 24 / 16 * 1rem);
+    --text-xl: clamp(25 / 16 * 1rem, 1.4107rem + 0.7591vi, 32 / 16 * 1rem);
+    --text-2xl: clamp(31.3 / 16 * 1rem, 1.7056rem + 1.2375vi, 42.6 / 16 * 1rem);
+    --text-xs--line-height: var(--line-height-regular);
+    --text-sm--line-height: var(--line-height-regular);
+    --text-base--line-height: var(--line-height-regular);
+    --text-lg--line-height: var(--line-height-regular);
+    --text-xl--line-height: var(--line-height-tight);
+    --text-2xl--line-height: var(--line-height-tight);
 
-  /* Buffer fluid spacing: numeric utilities resolve these theme keys
+    /* Buffer fluid spacing: numeric utilities resolve these theme keys
      first (verified: p-4 emits padding:var(--spacing-4)), falling back
      to calc(var(--spacing) * N) for undefined keys. Fixed chrome
      (icons, tracks, dots, hairlines) is pinned to explicit px values
      at call sites so it never goes fluid. */
-  --spacing-1: clamp(0.5rem, 0.4805rem + 0.0977vi, 0.5625rem);
-  --spacing-2: clamp(0.75rem, 0.7109rem + 0.1953vi, 0.875rem);
-  --spacing-3: clamp(1rem, 0.9609rem + 0.1953vi, 1.125rem);
-  --spacing-4: clamp(1.5rem, 1.4414rem + 0.293vi, 1.6875rem);
-  --spacing-5: clamp(2rem, 1.9219rem + 0.3906vi, 2.25rem);
-  --spacing-6: clamp(3rem, 2.8828rem + 0.5859vi, 3.375rem);
-  --spacing-7: clamp(4rem, 3.8438rem + 0.7813vi, 4.5rem);
-  --spacing-8: clamp(6rem, 5.7656rem + 1.1719vi, 6.75rem);
+    --spacing-1: clamp(0.5rem, 0.4805rem + 0.0977vi, 0.5625rem);
+    --spacing-2: clamp(0.75rem, 0.7109rem + 0.1953vi, 0.875rem);
+    --spacing-3: clamp(1rem, 0.9609rem + 0.1953vi, 1.125rem);
+    --spacing-4: clamp(1.5rem, 1.4414rem + 0.293vi, 1.6875rem);
+    --spacing-5: clamp(2rem, 1.9219rem + 0.3906vi, 2.25rem);
+    --spacing-6: clamp(3rem, 2.8828rem + 0.5859vi, 3.375rem);
+    --spacing-7: clamp(4rem, 3.8438rem + 0.7813vi, 4.5rem);
+    --spacing-8: clamp(6rem, 5.7656rem + 1.1719vi, 6.75rem);
 }
 
 :root {
-  /* Fluid type scale (Buffer --font-size-step-*, px/16 idiom preserved) */
-  --font-size-step--3: calc(10.1 / 16 * 1rem);
-  --font-size-step--2: clamp(12.8 / 16 * 1rem, 0.7863rem + 0.0687vi, 13.5 / 16 * 1rem);
-  --font-size-step--1: clamp(14.3 / 16 * 1rem, 0.8703rem + 0.1172vi, 15.5 / 16 * 1rem);
-  --font-size-step-0: clamp(16 / 16 * 1rem, 0.9565rem + 0.2174vi, 18 / 16 * 1rem);
-  --font-size-step-1: clamp(20 / 16 * 1rem, 1.1632rem + 0.4341vi, 24 / 16 * 1rem);
-  --font-size-step-2: clamp(25 / 16 * 1rem, 1.4107rem + 0.7591vi, 32 / 16 * 1rem);
-  --font-size-step-3: clamp(31.3 / 16 * 1rem, 1.7056rem + 1.2375vi, 42.6 / 16 * 1rem);
+    /* Fluid type scale (Buffer --font-size-step-*, px/16 idiom preserved) */
+    --font-size-step--3: calc(10.1 / 16 * 1rem);
+    --font-size-step--2: clamp(
+        12.8 / 16 * 1rem,
+        0.7863rem + 0.0687vi,
+        13.5 / 16 * 1rem
+    );
+    --font-size-step--1: clamp(
+        14.3 / 16 * 1rem,
+        0.8703rem + 0.1172vi,
+        15.5 / 16 * 1rem
+    );
+    --font-size-step-0: clamp(
+        16 / 16 * 1rem,
+        0.9565rem + 0.2174vi,
+        18 / 16 * 1rem
+    );
+    --font-size-step-1: clamp(
+        20 / 16 * 1rem,
+        1.1632rem + 0.4341vi,
+        24 / 16 * 1rem
+    );
+    --font-size-step-2: clamp(
+        25 / 16 * 1rem,
+        1.4107rem + 0.7591vi,
+        32 / 16 * 1rem
+    );
+    --font-size-step-3: clamp(
+        31.3 / 16 * 1rem,
+        1.7056rem + 1.2375vi,
+        42.6 / 16 * 1rem
+    );
 
-  /* Fluid spacing (Buffer --space-step-*; full pair list trimmed to used pairs) */
-  --space-step-0: clamp(0.25rem, 0.2305rem + 0.0977vi, 0.3125rem);
-  --space-step-1: clamp(0.5rem, 0.4805rem + 0.0977vi, 0.5625rem);
-  --space-step-2: clamp(0.75rem, 0.7109rem + 0.1953vi, 0.875rem);
-  --space-step-3: clamp(1rem, 0.9609rem + 0.1953vi, 1.125rem);
-  --space-step-4: clamp(1.5rem, 1.4414rem + 0.293vi, 1.6875rem);
-  --space-step-5: clamp(2rem, 1.9219rem + 0.3906vi, 2.25rem);
-  --space-step-6: clamp(3rem, 2.8828rem + 0.5859vi, 3.375rem);
-  --space-step-7: clamp(4rem, 3.8438rem + 0.7813vi, 4.5rem);
-  --space-step-8: clamp(6rem, 5.7656rem + 1.1719vi, 6.75rem);
-  --space-step-3-step-5: clamp(1rem, 0.6094rem + 1.9531vi, 2.25rem);
-  --space-step-5-step-7: clamp(2rem, 1.2188rem + 3.9063vi, 4.5rem);
+    /* Fluid spacing (Buffer --space-step-*; full pair list trimmed to used pairs) */
+    --space-step-0: clamp(0.25rem, 0.2305rem + 0.0977vi, 0.3125rem);
+    --space-step-1: clamp(0.5rem, 0.4805rem + 0.0977vi, 0.5625rem);
+    --space-step-2: clamp(0.75rem, 0.7109rem + 0.1953vi, 0.875rem);
+    --space-step-3: clamp(1rem, 0.9609rem + 0.1953vi, 1.125rem);
+    --space-step-4: clamp(1.5rem, 1.4414rem + 0.293vi, 1.6875rem);
+    --space-step-5: clamp(2rem, 1.9219rem + 0.3906vi, 2.25rem);
+    --space-step-6: clamp(3rem, 2.8828rem + 0.5859vi, 3.375rem);
+    --space-step-7: clamp(4rem, 3.8438rem + 0.7813vi, 4.5rem);
+    --space-step-8: clamp(6rem, 5.7656rem + 1.1719vi, 6.75rem);
+    --space-step-3-step-5: clamp(1rem, 0.6094rem + 1.9531vi, 2.25rem);
+    --space-step-5-step-7: clamp(2rem, 1.2188rem + 3.9063vi, 4.5rem);
 
-  /* Tracking / leading / weights (Buffer; headings are weight 400, not bold) */
-  --letter-spacing-tight: -0.02em;
-  --letter-spacing-regular: 0.0075em;
-  --letter-spacing-small: 0.03125em;
-  --letter-spacing-wide: 0.0625em;
-  --line-height-regular: 1.4;
-  --line-height-tight: 1.1;
-  --font-weight-regular: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
+    /* Tracking / leading / weights (Buffer; headings are weight 400, not bold) */
+    --letter-spacing-tight: -0.02em;
+    --letter-spacing-regular: 0.0075em;
+    --letter-spacing-small: 0.03125em;
+    --letter-spacing-wide: 0.0625em;
+    --line-height-regular: 1.4;
+    --line-height-tight: 1.1;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 
-  /* Radii / outline / motion / layout */
-  --border-radius-small: 0.625rem;
-  --border-radius-medium: 1.25rem;
-  --border-radius-large: 2.5rem;
-  --border-radius-full: 100vmax;
-  --outline-width: 0.125rem;
-  --outline-offset: 0.125rem;
-  --transition-duration: 150ms;
-  --transition-timing-function: ease-out;
-  --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
-  --ease-out-spring: cubic-bezier(0.22, 1, 0.36, 1);
-  --duration-reveal: 600ms;
-  --top-navigation-block-size: 5.5rem;
-  --container-max-inline-size: calc(80rem + calc(var(--space-step-3-step-5) * 2));
-  --gutter: var(--space-step-5-step-7);
-  --shadow-raised:
-    0 0.25rem 0.75rem -0.125rem oklch(0 0 0 / 0.1), 0 0 0.0625rem 0.0625rem oklch(0 0 0 / 0.05);
-  --shadow-floating:
-    0 1rem 1.5rem -0.5rem oklch(0 0 0 / 0.1), 0 0.25rem 0.5rem -0.25rem oklch(0 0 0 / 0.1),
-    0 0 0.0625rem 0.0625rem oklch(0 0 0 / 0.05);
+    /* Radii / outline / motion / layout */
+    --border-radius-small: 0.625rem;
+    --border-radius-medium: 1.25rem;
+    --border-radius-large: 2.5rem;
+    --border-radius-full: 100vmax;
+    --outline-width: 0.125rem;
+    --outline-offset: 0.125rem;
+    --transition-duration: 150ms;
+    --transition-timing-function: ease-out;
+    --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-out-spring: cubic-bezier(0.22, 1, 0.36, 1);
+    --duration-reveal: 600ms;
+    --top-navigation-block-size: 5.5rem;
+    --container-max-inline-size: calc(
+        80rem + calc(var(--space-step-3-step-5) * 2)
+    );
+    --gutter: var(--space-step-5-step-7);
+    --shadow-raised:
+        0 0.25rem 0.75rem -0.125rem oklch(0 0 0 / 0.1),
+        0 0 0.0625rem 0.0625rem oklch(0 0 0 / 0.05);
+    --shadow-floating:
+        0 1rem 1.5rem -0.5rem oklch(0 0 0 / 0.1),
+        0 0.25rem 0.5rem -0.25rem oklch(0 0 0 / 0.1),
+        0 0 0.0625rem 0.0625rem oklch(0 0 0 / 0.05);
 
-  /* Semantic slots Buffer has and shadcn lacks (unconsumed for now) */
-  --color-text-subtle: var(--color-sand-800);
-  --color-text-link: var(--color-brand-700);
-  --color-surface-brand: var(--color-brand-50);
-  --color-border-strong: var(--color-sand-600);
+    /* Semantic slots Buffer has and shadcn lacks (unconsumed for now) */
+    --color-text-subtle: var(--color-sand-800);
+    --color-text-link: var(--color-brand-700);
+    --color-surface-brand: var(--color-brand-50);
+    --color-border-strong: var(--color-sand-600);
 }

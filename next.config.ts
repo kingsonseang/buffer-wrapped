@@ -5,6 +5,7 @@ const nextConfig: NextConfig = {
   experimental: {
     agentFeedback: true,
   },
+  allowedDevOrigins: ["*.ngrok-free.app"],
   cacheComponents: true,
   partialPrefetching: true,
   reactCompiler: true,
